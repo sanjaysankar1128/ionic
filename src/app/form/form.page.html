@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-white">+ Add  Employee </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="container ion-content-spacing">
+      <ion-item class="ion-item-spacing">
+        <ion-label position="floating" class="text-dark">Name</ion-label>
+        <ion-input type="text" formControlName="name"  class="ion-input-field"  [(ngModel)]="employeeobj.name"></ion-input>
+      </ion-item>
+      <ion-item class="ion-item-spacing">
+        <ion-label position="floating"  class="text-dark">Email</ion-label> 
+        <ion-input formControlName="email" type="email"  [(ngModel)]="employeeobj.email"></ion-input>
+      </ion-item>
+      <ion-item class="ion-item-spacing" >
+        <ion-label position="floating" class="text-dark">Age</ion-label>
+        <ion-input formControlName="age" type="number"  [(ngModel)]="employeeobj.age"></ion-input>
+      </ion-item>
+      <ion-item class="ion-item-spacing">
+        <ion-label position="floating" class="text-dark">Mobile</ion-label>
+        <ion-input type="number" formControlName="mobile"  [(ngModel)]="employeeobj.mobile"></ion-input>
+      </ion-item>
+      <ion-button type="submit" [disabled]="!employeeForm.valid">Submit</ion-button>
+    </form>
+  </div>
+</ion-content>

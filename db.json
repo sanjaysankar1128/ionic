@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "prithivi",
+      "email": "prithivi@gmail.com",
+      "age": "20",
+      "mobile": "9087654321"
+    },
+    {
+      "name": "sanjay.S",
+      "email": "sanjay@gmail.com",
+      "age": 20,
+      "mobile": 9087654321,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

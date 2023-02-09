@@ -25,3 +25,58 @@
 #container a {
   text-decoration: none;
 }
+
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
+  border-bottom: 1px solid lightgray;
+}
+
+:host {
+  ::ng-deep {
+    .form-field-input-control {
+      height: 480px !important;
+      max-width: 400px !important;
+      border: none !important;
+    }
+
+    .mdc-text-field__input {
+      height: 54px !important;
+      width: 100%;
+      min-width: 0;
+      border: none !important;
+      border-radius: 0;
+      background: none;
+      appearance: none;
+      padding: 0;
+    }
+
+    mdc-line-ripple::before {
+      border-bottom-width: 1px  solid lightgray;;
+  }
+  .mat-mdc-form-field-subscript-wrapper {
+    border: #0dabe0;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+  }
+}
+
+.col-3 {
+  border-radius: 5px;
+  height: 40px !important;
+  border: 1px solid lightgray !important;
+  padding: 5px;
+}
+
+.delete {
+  color: #f21c05;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.edit {
+  color: #0dabe0;
+  font-size: 24px;
+  cursor: pointer;
+}
