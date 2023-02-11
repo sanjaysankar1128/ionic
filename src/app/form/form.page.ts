@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 import { EmployeeService } from '../service/employee.service';
 @Component({
   selector: 'app-form',
@@ -15,7 +16,7 @@ export class FormPage implements OnInit {
 
 
   constructor(private fb: FormBuilder,private service:EmployeeService, private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,private modalctrl:ModalController) {
       this.paramid = this.route.snapshot.params['data'];
       console.log(this.paramid)
       if (this.paramid) {
@@ -41,6 +42,7 @@ export class FormPage implements OnInit {
       this.service.updateEmployee(this.employeeForm.value, this.paramid).subscribe(
         res => {
           console.log(res)
+          this.modalctrl.dismiss();
           this.router.navigate(['/']);
         })
     }
@@ -49,6 +51,7 @@ export class FormPage implements OnInit {
         console.log(res)
         alert("success fully created")
         this.employeeForm.reset();
+        this.modalctrl.dismiss();
       }, err => {
         alert("something worng")
       }

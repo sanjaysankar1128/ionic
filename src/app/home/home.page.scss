@@ -1,3 +1,6 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
 #container {
   text-align: center;
 
@@ -51,14 +54,16 @@
     }
 
     mdc-line-ripple::before {
-      border-bottom-width: 1px  solid lightgray;;
-  }
-  .mat-mdc-form-field-subscript-wrapper {
-    border: #0dabe0;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-}
+      border-bottom-width: 1px solid lightgray;
+      ;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper {
+      border: #0dabe0;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+    }
   }
 }
 
@@ -79,4 +84,32 @@
   color: #0dabe0;
   font-size: 24px;
   cursor: pointer;
+}
+
+.example-form-field__container {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+}
+
+.bx-search-alt-2 {
+  margin-left: 10px;
+  font-size: 24px;
+}
+.label{
+  font-size: 20px;
+}
+.table {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+ion-button {
+  border-radius: 15px !important;
+}
+
+.custom-modal-css {
+  --width: 500px;
+  --height: 300px;
 }

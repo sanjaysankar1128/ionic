@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .ion-item-spacing {
     margin-bottom: 20px;
     color: aliceblue;
@@ -6,13 +8,11 @@
 
 .ion-content-spacing {
     padding-top: 20px;
-
 }
 
 .container {
     padding: 10px;
+}
 
-}
-::ng-deep.ion-input-field{
-    border-radius: 10px !important;
-}
+  
+
